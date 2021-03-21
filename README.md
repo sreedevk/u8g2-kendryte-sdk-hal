@@ -1,5 +1,7 @@
 ## U8G2 Kendryte SDK (K210) Hardware Abstraction Layer
 
+![Untitled](https://user-images.githubusercontent.com/36154121/111921770-6bae4580-8abc-11eb-8501-6546e9949889.png)
+
 This project a port of the u8g2 HAL for the Kendryte SDK Platform (K210 Chipset). This HAL makes use of the DMAC (Direct Memory Access Controller) Channels available on the K210 for high speed data transfer (This can be disabled optionally). 
 
 
