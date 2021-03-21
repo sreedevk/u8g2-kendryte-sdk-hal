@@ -4,7 +4,7 @@
 
 This project a port of the u8g2 HAL for the Kendryte SDK Platform (K210 Chipset). This HAL makes use of the DMAC (Direct Memory Access Controller) Channels available on the K210 for high speed data transfer (This can be disabled optionally). 
 
-U8g2 is a great library for monochrome displays developed by Olikarus. You can view the project and learn more about it here:
+U8g2 is a great library for monochrome displays developed by Olikraus. You can view the project and learn more about it here:
 https://github.com/olikraus/u8g2/
 
 ## Development Status
