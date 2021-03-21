@@ -53,3 +53,7 @@ void initialize_oled_display(u8g2_t *oled_display) {
   u8g2_SendBuffer(&display_handle);
 }
 ```
+
+### Result:
+![u8g2_kendryte_example_result](https://media.giphy.com/media/y8ljSQdLt1VP0hu5l4/giphy.gif)
+
