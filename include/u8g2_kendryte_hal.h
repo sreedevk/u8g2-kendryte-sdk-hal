@@ -33,7 +33,7 @@
 #define DEFAULT_DMAC_TX_CHANNEL     DMAC_CHANNEL0
 #define DEFAULT_DMAC_RX_CHANNEL     DMAC_CHANNEL1
 #define DEFAULT_I2C_DEVICE_NUM      I2C_DEVICE_0
-#define OLED_I2C_BUS_DEFAULT_FREQ   400000u /* 4 KHz */
+#define OLED_I2C_BUS_DEFAULT_FREQ   400000 /* 4 KHz */
 
 #define INIT_U8G2_KENDRYTE_HAL(x) u8g2_kendryte_hal_t x = { \
   /* I2C CONFIG */            \
@@ -62,7 +62,7 @@ typedef struct {
   int8_t scl;
   bool   use_hw_i2c;
   bool   use_dmac;
-  uint16_t i2c_bus_freq;
+  int i2c_bus_freq;
   dmac_channel_number_t tx_dmac_channel;
   dmac_channel_number_t rx_dmac_channel;
   i2c_device_number_t   i2c_device_number;
