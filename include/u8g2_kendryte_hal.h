@@ -28,11 +28,14 @@
 #include <stdbool.h>
 #include <dmac.h>
 #include <i2c.h>
+#include <fpioa.h>
 
 #define DEFAULT_DMAC_STATE          true
 #define DEFAULT_DMAC_TX_CHANNEL     DMAC_CHANNEL0
 #define DEFAULT_DMAC_RX_CHANNEL     DMAC_CHANNEL1
 #define DEFAULT_I2C_DEVICE_NUM      I2C_DEVICE_0
+#define DEFAULT_I2C_SCL_FUNC        FUNC_I2C0_SCLK
+#define DEFAULT_I2C_SDA_FUNC        FUNC_I2C0_SDA
 #define OLED_I2C_BUS_DEFAULT_FREQ   400000 /* 4 KHz */
 
 #define INIT_U8G2_KENDRYTE_HAL(x) u8g2_kendryte_hal_t x = { \
@@ -45,6 +48,8 @@
   .tx_dmac_channel   = DEFAULT_DMAC_TX_CHANNEL,    \
   .rx_dmac_channel   = DEFAULT_DMAC_RX_CHANNEL,    \
   .i2c_device_number = DEFAULT_I2C_DEVICE_NUM,     \
+  .i2c_scl_func      = DEFAULT_I2C_SCL_FUNC,     \
+  .i2c_sda_func      = DEFAULT_I2C_SDA_FUNC,     \
   /* SPI CONFIG*/            \
   .sck               = -1,   \
   .mosi              = -1,   \
@@ -66,6 +71,8 @@ typedef struct {
   dmac_channel_number_t tx_dmac_channel;
   dmac_channel_number_t rx_dmac_channel;
   i2c_device_number_t   i2c_device_number;
+  fpioa_function_t      i2c_scl_func;
+  fpioa_function_t      i2c_sda_func;
 
   /* spi */
   int8_t sck;

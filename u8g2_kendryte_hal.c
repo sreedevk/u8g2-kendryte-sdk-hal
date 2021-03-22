@@ -180,8 +180,8 @@ uint8_t kendryte_u8x8_byte_hw_i2c(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, vo
     case U8X8_MSG_BYTE_INIT:
       /* custom code for i2c subsystem initialization */
       if(kendryte_hal.use_hw_i2c) {
-        fpioa_set_function(kendryte_hal.scl, FUNC_I2C0_SCLK);
-        fpioa_set_function(kendryte_hal.sda, FUNC_I2C0_SDA);
+        fpioa_set_function(kendryte_hal.scl, kendryte_hal.i2c_scl_func);
+        fpioa_set_function(kendryte_hal.sda, kendryte_hal.i2c_sda_func);
         dmac_init();
         i2c_init(kendryte_hal.i2c_device_number, u8x8_GetI2CAddress(u8x8) >> 1, 7, kendryte_hal.i2c_bus_freq);
       }
