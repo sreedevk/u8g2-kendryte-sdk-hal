@@ -16,17 +16,6 @@ u8g2 cb functions for I2C SW Bit banging & SPI (3-wire & 4-wire) have not been i
 To use this u8g2 HAL, add this repository as a submodule to your `kendryte-standalone-sdk` project and include the sources files (including headers) in your project cmake files.
 Once you have `u8g2_kendryte_hal.h` & `u8g2.h` available in your main application file, you can initialize your u8g2 supported display device, the `u8g2_kendryte_hal_t` object and `u8g2_t` object.
 
-alternatively, you can clone my fork of `kendryte-standalone-sdk` that contains the `u8g2_kendryte_hal` and other useful drivers & plugins for the K210 Platform from here:
-
-https://github.com/sreedevk/kendryte-sdk-dev
-
-This repository on the above link is a template repository.
-make sure that you clone the repo along with its' submodules to ensure that you have all the drivers available:
-
-```bash
-  git clone https://github.com/sreedevk/kendryte-sdk-dev --recurse-submodules
-```
-
 ## Example Usage
 
 This code was used to test SSD1306 128x32 i2c interface oled display on the MAix Bit development board.
